@@ -35,4 +35,4 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 # Ignore all files related to API keys
-.env
+.env.development
