@@ -18,6 +18,7 @@ async function bootstrap() {
   .setTitle('SuperFlight API')
   .setDescription('Scheduled Flights App')
   .setVersion('1.0.0')
+  .addBearerAuth()
   .build();
   const document = SwaggerModule.createDocument(app, options);
   //* Route swagger
@@ -26,6 +27,6 @@ async function bootstrap() {
 		  filter:true
 	  }
   });
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
